@@ -34,11 +34,11 @@
 (setq ring-bell-function 'ignore)
 
 ;; デフォルトの透明度を設定する (85%)
-(add-to-list 'default-frame-alist '(alpha . 85))
+(add-to-list 'default-frame-alist '(alpha . 100))
 
 ;; カレントウィンドウの透明度を変更する (85%)
 ;; (set-frame-parameter nil 'alpha 0.85)
-(set-frame-parameter nil 'alpha 85)
+(set-frame-parameter nil 'alpha 100)
 
 ;; 最近使ったファイルを表示
 ;;(require 'recentf)
@@ -66,14 +66,14 @@
 (if (boundp 'window-system)
     (setq default-frame-alist
           (append (list
-                   '(foreground-color . "white")  ; 文字色
-                   '(background-color . "Black")  ; 背景色
-                   '(border-color     . "white")  ; ボーダー色
-                   '(mouse-color      . "white")  ; マウスカーソルの色
-                   '(cursor-color     . "white")  ; カーソルの色
+                   ;;'(foreground-color . "white")  ; 文字色
+                   ;;'(background-color . "Black")  ; 背景色
+                   ;;'(border-color     . "white")  ; ボーダー色
+                   ;;'(mouse-color      . "white")  ; マウスカーソルの色
+                   ;;'(cursor-color     . "white")  ; カーソルの色
                    '(cursor-type      . box)      ; カーソルの形状
                    '(top . 0) ; ウィンドウの表示位置（Y座標）
-                   '(left . -1) ; ウィンドウの表示位置（X座標）
+                   '(left . 0) ; ウィンドウの表示位置（X座標）
                    '(width . 99) ; ウィンドウの幅（文字数）
                    '(height . 61) ; ウィンドウの高さ（文字数）
                    )
@@ -94,3 +94,5 @@
  ;; If there is more than one, they won't work right.
  )
 
+(el-get-bundle solarized-emacs)
+(load-theme 'solarized-dark t)
