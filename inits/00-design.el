@@ -34,11 +34,11 @@
 (setq ring-bell-function 'ignore)
 
 ;; デフォルトの透明度を設定する (85%)
-(add-to-list 'default-frame-alist '(alpha . 100))
+(add-to-list 'default-frame-alist '(alpha . 90))
 
 ;; カレントウィンドウの透明度を変更する (85%)
 ;; (set-frame-parameter nil 'alpha 0.85)
-(set-frame-parameter nil 'alpha 100)
+(set-frame-parameter nil 'alpha 90)
 
 ;; 最近使ったファイルを表示
 ;;(require 'recentf)
@@ -72,6 +72,7 @@
                    ;;'(mouse-color      . "white")  ; マウスカーソルの色
                    ;;'(cursor-color     . "white")  ; カーソルの色
                    '(cursor-type      . box)      ; カーソルの形状
+		   '(font . "fontset-14")
                    '(top . 0) ; ウィンドウの表示位置（Y座標）
                    '(left . 0) ; ウィンドウの表示位置（X座標）
                    '(width . 99) ; ウィンドウの幅（文字数）
