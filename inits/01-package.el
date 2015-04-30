@@ -128,8 +128,8 @@ mouse-3: delete other windows"
 ;;tuareg-mode
 (el-get-bundle tuareg-mode)
 
-;(el-get-bundle! flycheck)
-;(add-hook 'after-init-hook #'global-flycheck-mode)
+(el-get-bundle! flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 ;(el-get-bundle! flycheck-pos-tip)
 ;(eval-after-load 'flycheck
 ;  '(custom-set-variables
